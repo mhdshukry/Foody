@@ -1,25 +1,35 @@
-// const swiper = new swiper('.swiper', {
-//     // Optional parameters
-//     direction: 'horizontal',
-//     loop: true,
+var swiper = new swiper('.review-slider', {
+    // Optional parameters
+    spaceBetween: 20,
+    loop: true,
 
-//     autoplay: {
-//         delay: 3500,
-//         disableOnInteraction: false,
-//     },
+    autoplay: {
+        delay: 7500,
+        disableOnInteraction: false,
+    },
 
-//     // If we need pagination
-//     pagination: {
-//         el: '.swiper-pagination',
-//     },
+    breakpoints: {
+        0: {
+            slidePerView: 1,
+        },
+        768: {
+            slidePerView: 2,
+        },
+        1020: {
+            slidePerView: 3,
+        },
+        1780: {
+            slidePerView: 4,
+        },
+        2420: {
+            slidePerView: 5,
+        },
+        3120: {
+            slidePerView: 6,
+        },
+    },
 
-//     // Navigation arrows
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-
-// });
+});
 
 
 var swiper = new Swiper(".container", {
