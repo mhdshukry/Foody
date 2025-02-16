@@ -8,6 +8,7 @@
     <title>Pizza</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <!------- nav part -->
@@ -15,7 +16,7 @@
 <body>
 
     <header>
-        <a href="#" class="logo"><i class="fas-fa-untensils">E - Foody</i></a>
+        <a href="#" class="logo"><i class="fas fa-utensils"></i> E - Foody</a>
 
         <nav class="navbar">
             <a href="#Home" class="active">Home</a>
@@ -24,16 +25,36 @@
             <a href="#Menu">Menu</a>
             <a href="#Review">Review</a>
             <a href="#Order">Order</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <div class="icons">
+                <i class="fa fa-search" aria-hidden="true" id="search-icons"></i>
+                <a href="#" class="fa fa-heart" aria-hidden="true"></a>
+                <a href="#" class="fa fa-shopping-cart" aria-hidden="true"></a>
+                <i class="fas fa-user"></i>
+            </div>
         </nav>
 
-        <div class="icons">
+        <div class="menu-btn">
             <i class="fa fa-bars" aria-hidden="true" id="bars"></i>
-            <i class="fa fa-search" aria-hidden="true" id="search-icons"></i></i>
-            <a href="#" class="fa fa-heart" aria-hidden="true"></i></a>
-            <a href="#" class="fa fa-shopping-cart" aria-hidden="true"></a>
         </div>
     </header>
 
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => {
+            const navbar = document.querySelector('.navbar');
+            const menuBtn = document.querySelector('.menu-btn i');
+            navbar.classList.toggle('active');
+            if (navbar.classList.contains('active')) {
+                menuBtn.classList.remove('fa-bars');
+                menuBtn.classList.add('fa-times');
+            } else {
+                menuBtn.classList.remove('fa-times');
+                menuBtn.classList.add('fa-bars');
+            }
+        });
+    </script>
 
     <!------ home part-->
     <section class="home" id="Home">

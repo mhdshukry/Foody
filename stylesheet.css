@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@200;300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@200;300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600&display=swap');
 
 :root {
     --green: #27ae60;
@@ -24,7 +24,11 @@ html {
     font-size: 62.5%;
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
+}
 
+body {
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -51,6 +55,12 @@ header .logo i {
     color: var(--green);
 }
 
+header .navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
 header .navbar a {
     font-size: 1.7rem;
     border-radius: .5rem;
@@ -73,10 +83,15 @@ header .navbar a:hover {
     background: var(--black);
 }
 
+header .icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 header .icons a,
 header .icons i {
     cursor: pointer;
-    margin-left: .5rem;
     height: 4.2rem;
     line-height: 4.2rem;
     width: 4.2rem;
@@ -94,6 +109,66 @@ header .icons i:hover {
     transform: rotate(360deg);
 }
 
+header .menu-btn {
+    display: none;
+    font-size: 2.5rem;
+    color: var(--black);
+    cursor: pointer;
+    position: absolute;
+    left: 1rem; /* Move to the left side of the page */
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 5%;
+        justify-content: space-between;
+    }
+    
+    header .logo {
+        flex: 1;
+        text-align: center;
+    }
+
+    header .navbar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem; /* Adjusted gap for proper spacing */
+        box-shadow: var(--box-shadow);
+        transition: left 0.3s ease-in-out;
+    }
+
+    header .navbar.active {
+        left: 0;
+    }
+
+    header .navbar a {
+        font-size: 2rem;
+        color: var(--black);
+    }
+
+    header .navbar a.active,
+    header .navbar a:hover {
+        background: var(--green);
+    }
+
+    header .icons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header .menu-btn {
+        display: block;
+    }
+}
+
 .home .container .slide {
     display: flex;
     align-items: center;
@@ -104,12 +179,12 @@ header .icons i:hover {
 
 .home .container .slide .content {
     flex: 1 1 40rem;
+    text-align: center;
 }
 
 .home .container .slide .image {
     flex: 1 1 50rem;
     object-fit: contain;
-
 }
 
 .home .container .slide img {
@@ -118,24 +193,20 @@ header .icons i:hover {
     border: 10px solid var(--green);
 }
 
-
 .home .container .slide .content span {
     color: var(--green);
     font-size: 2.5rem;
-    padding-left: 280px;
 }
 
 .home .container .slide .content h3 {
     color: var(--black);
     font-size: 7rem;
-    padding-left: 280px
 }
 
 .home .container .slide .content p {
     color: var(--light-color);
     font-size: 2.2rem;
     padding: .5rem;
-    padding-left: 280px
 }
 
 .btn {
@@ -147,10 +218,8 @@ header .icons i:hover {
     border-radius: 10px;
     cursor: pointer;
     padding: .6rem .6rem .6rem .6rem;
-    margin-left: 350px;
 }
 
-.btns:hover,
 .btn:hover {
     color: white;
     background: var(--green);
@@ -162,7 +231,6 @@ header .icons i:hover {
     width: 80%;
     height: 650px;
 }
-
 
 .sub-heading {
     text-align: center;
@@ -181,7 +249,7 @@ header .icons i:hover {
 
 .dishes .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(32rem, 5fr));
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
     gap: 1.5rem;
     object-fit: contain;
     padding-left: 10px;
@@ -320,9 +388,8 @@ header .icons i:hover {
 }
 
 .menu .box-container {
-
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 5fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
     object-fit: contain;
     padding-left: 10px;
@@ -397,64 +464,7 @@ header .icons i:hover {
     margin-left: 100px;
 }
 
-/*
-.review .slide {
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    box-shadow: var(--box-shadow);
-    border: 0.5rem solid rgba(0, 0, 0, .2);
-    border-radius: .5rem;
-    position: relative;
-    flex: 1 1 15rem;
-    gap: 2rem;
-    background: #eee;
-
-}
-
-.review .slide .user {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    padding-bottom: 1.5rem;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.review .slide .user img {
-    height: 7rem;
-    width: 7rem;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.review .slide .user h3 {
-    color: var(--black);
-    font-size: 1.8rem;
-    padding-bottom: .5rem;
-}
-
-.review .slide .use i {
-    font-size: 1.3rem;
-    color: var(--green);
-}
-
-.review .slide p {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    color: var(--light-color);
-}
-
-.review .slide .fa-quote-right {
-    position: absolute;
-    top: 2rem;
-    right: 5rem;
-    font-size: 5rem;
-    color: #ccc;
-}
-
-.review .slide .user-info .stars i {
-    color: rgb(255, 140, 0);
-}
-/*  */
+/* Review Section */
 .review {
     margin-left: 15px;
     margin-right: 15px;
@@ -496,7 +506,6 @@ header .icons i:hover {
     line-height: 1.8;
     color: var(--light-color);
     font-size: 1.4rem;
-
 }
 
 .review .review-slider .box h3 {
@@ -508,4 +517,45 @@ header .icons i:hover {
 .review .review-slider .box .stars {
     color: orange;
     font-size: 1.3rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 5%;
+    }
+
+    .home .container .slide .content {
+        text-align: center;
+    }
+
+    .home .container .slide .content span,
+    .home .container .slide .content h3,
+    .home .container .slide .content p,
+    .btn {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .home .container .slide img {
+        width: 70%;
+    }
+
+    .dishes .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    }
+
+    .about .raw {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+
+    .review .review-slider .box {
+        width: 90%;
+        margin: 0 auto 1rem auto;
+    }
 }
