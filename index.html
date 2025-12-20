@@ -1,607 +1,683 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-Foody | Fresh &amp; Fast Bites</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <a href="#home" class="skip-link">Skip to content</a>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-
-<body>
-
-    <header>
-        <a href="#" class="logo"><i class="fas-fa-untensils">E - Foody</i></a>
-
-        <nav class="navbar">
-            <a href="#Home" class="active">Home</a>
-            <a href="#Dishes">Dishes</a>
-            <a href="#About">About</a>
-            <a href="#Menu">Menu</a>
-            <a href="#Review">Review</a>
-            <a href="#Order">Order</a>
+    <header class="site-header" id="site-header">
+      <div class="container site-header__inner">
+        <a href="#home" class="logo" aria-label="E-Foody home">
+          <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+          <span>E-<span class="accent">Foody</span></span>
+        </a>
+        <nav
+          class="site-nav"
+          id="primary-navigation"
+          data-navigation
+          aria-label="Primary"
+        >
+          <ul class="site-nav__list">
+            <li>
+              <a class="nav-link" href="#home">
+                <i class="nav-link__icon fa-solid fa-house" aria-hidden="true"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#signature-dishes">
+                <i class="nav-link__icon fa-solid fa-bowl-food" aria-hidden="true"></i>
+                <span>Dishes</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#menu">
+                <i class="nav-link__icon fa-solid fa-list-ul" aria-hidden="true"></i>
+                <span>Menu</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#about">
+                <i class="nav-link__icon fa-solid fa-circle-info" aria-hidden="true"></i>
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#testimonials">
+                <i class="nav-link__icon fa-solid fa-star" aria-hidden="true"></i>
+                <span>Reviews</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#order">
+                <i class="nav-link__icon fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                <span>Order</span>
+              </a>
+            </li>
+          </ul>
+          <div class="site-nav__actions">
+            <a class="btn btn--ghost" href="#order">Book a Table</a>
+          </div>
         </nav>
-
-        <div class="icons">
-            <i class="fa fa-bars" aria-hidden="true" id="bars"></i>
-            <i class="fa fa-search" aria-hidden="true" id="search-icons"></i></i>
-            <a href="#" class="fa fa-heart" aria-hidden="true"></i></a>
-            <a href="#" class="fa fa-shopping-cart" aria-hidden="true"></a>
+        <div class="site-header__cta">
+          <a class="btn btn--primary" href="#menu">Order Now</a>
         </div>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          data-nav-toggle
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </header>
 
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <span class="eyebrow">Fresh • Fast • Flavorful</span>
+            <div class="hero__visual">
+              <div class="hero-slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <article class="hero-card">
+                      <img
+                        src="assets/bur.jpg"
+                        alt="Signature gourmet burger with fries"
+                      />
+                      <div class="hero-card__overlay">
+                        <span class="badge">Chef's pick</span>
+                        <h3>Green Chile Burger</h3>
+                        <p>Smoky beef, roasted chiles, and artisan brioche.</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="hero-card">
+                      <img
+                        src="assets/bbq chic.jpg"
+                        alt="Texas style barbeque platter"
+                      />
+                      <div class="hero-card__overlay">
+                        <span class="badge">Slow cooked</span>
+                        <h3>Texas BBQ Feast</h3>
+                        <p>House-glazed ribs, corn relish, and burnt-end beans.</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="hero-card">
+                      <img
+                        src="assets/indian roast.jpg"
+                        alt="Indian roast chicken with herbs"
+                      />
+                      <div class="hero-card__overlay">
+                        <span class="badge">New</span>
+                        <h3>Masala Roast Chicken</h3>
+                        <p>Fire-roasted with turmeric yogurt and charred lemon.</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="hero__copy">
+              <h1 id="hero-title">Delicious meals crafted for every craving</h1>
+              <p>
+                Explore an elevated dining experience with hand-crafted dishes,
+                seasonal ingredients, and lightning-fast delivery. E-Foody brings
+                world flavors to your table in minutes.
+              </p>
+              <ul class="hero__metrics">
+                <li><span>350+</span> Menu combinations</li>
+                <li><span>25k</span> Happy customers</li>
+                <li><span>20</span> Minute average delivery</li>
+              </ul>
+              <div class="hero__actions">
+                <a class="btn btn--primary" href="#menu">Explore Menu</a>
+                <a class="btn btn--ghost" href="#signature-dishes">Daily Specials</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section
+        class="section"
+        id="signature-dishes"
+        aria-labelledby="signature-title"
+      >
+        <div class="container">
+          <span class="eyebrow">Our dishes</span>
+          <h2 id="signature-title">Guest favorites this week</h2>
+          <div class="card-grid">
+            <article class="dish-card">
+              <img
+                src="assets/Korean-Fried-Chicken-RCSQ.jpg"
+                alt="Korean fried chicken with glaze"
+              />
+              <div class="dish-card__body">
+                <div class="dish-card__header">
+                  <h3>Korean Fire Chicken</h3>
+                  <span class="price">Rs.1700</span>
+                </div>
+                <p>
+                  Double-fried wings tossed in gochujang caramel, served with
+                  pickled radish.
+                </p>
+                <div class="dish-card__footer">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.9</span
+                  >
+                  <a class="btn btn--small" href="#order">Add to cart</a>
+                </div>
+              </div>
+            </article>
+            <article class="dish-card">
+              <img
+                src="assets/extreame pizza.jpeg"
+                alt="Black crust chicken pizza"
+              />
+              <div class="dish-card__body">
+                <div class="dish-card__header">
+                  <h3>Extreme Black Pizza</h3>
+                  <span class="price">Rs.2000</span>
+                </div>
+                <p>
+                  Charcoal crust, smoked chicken, truffle pecorino, and
+                  blistered tomatoes.
+                </p>
+                <div class="dish-card__footer">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.8</span
+                  >
+                  <a class="btn btn--small" href="#order">Add to cart</a>
+                </div>
+              </div>
+            </article>
+            <article class="dish-card">
+              <img
+                src="assets/Submarine-Vegetable.jpg"
+                alt="Vegetarian submarine sandwich"
+              />
+              <div class="dish-card__body">
+                <div class="dish-card__header">
+                  <h3>Garden Submarine</h3>
+                  <span class="price">Rs.500</span>
+                </div>
+                <p>
+                  Roasted veggies, basil pesto, and burrata on freshly baked
+                  focaccia.
+                </p>
+                <div class="dish-card__footer">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.7</span
+                  >
+                  <a class="btn btn--small" href="#order">Add to cart</a>
+                </div>
+              </div>
+            </article>
+            <article class="dish-card">
+              <img
+                src="assets/Pan-Pizza-020.jpg"
+                alt="BBQ pan pizza on wooden board"
+              />
+              <div class="dish-card__body">
+                <div class="dish-card__header">
+                  <h3>BBQ Pan Pizza</h3>
+                  <span class="price">Rs.1300</span>
+                </div>
+                <p>
+                  Chewy Detroit-style crust layered with smoky chicken and sweet
+                  onion jam.
+                </p>
+                <div class="dish-card__footer">
+                  <span class="rating"
+                    ><i class="fa-solid fa-star"></i> 4.9</span
+                  >
+                  <a class="btn btn--small" href="#order">Add to cart</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section class="home" id="Home">
-        <div class="swiper container">
-            <div class="swiper-wrapper wrapper">
-                <div class="swiper-slide slide">
-                    <div class="content">
-                        <span>Our Specials</span>
-                        <h3>Burger</h3>
-                        <p>Green Chile Cheeseburger</p>
-                        <a href="#" class="btn">Order Now</a>
-                    </div>
-                    <div class="image">
-                        <img src="assets/bur.jpg" alt="burger">
-                    </div>
+      <section
+        class="section section--alt"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="container about__grid">
+          <div class="about__media">
+            <img
+              src="assets/istockphoto-623207758-612x612.jpg"
+              alt="Chef preparing gourmet dish in the kitchen"
+            />
+            <div class="about__badge">
+              <span>Since 2012</span>
+              <strong>Locally owned &amp; lovingly cooked</strong>
+            </div>
+          </div>
+          <div class="about__content">
+            <span class="eyebrow">About us</span>
+            <h2 id="about-title">
+              We cook with heart and source with integrity
+            </h2>
+            <p>
+              Family-founded and chef-driven, E-Foody celebrates the diversity
+              of global comfort food. Every recipe is built from scratch using
+              whole ingredients, ethically raised proteins, and bold spices.
+            </p>
+            <ul class="about__list">
+              <li>
+                <i class="fa-solid fa-seedling"></i> Seasonal menus refreshed
+                monthly
+              </li>
+              <li>
+                <i class="fa-solid fa-bowl-food"></i> Dedicated vegetarian and
+                gluten-free kitchens
+              </li>
+              <li>
+                <i class="fa-solid fa-face-smile"></i> 24/7 concierge support
+                for events and catering
+              </li>
+            </ul>
+            <a class="btn btn--primary" href="#order">Discover catering</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="menu" aria-labelledby="menu-title">
+        <div class="container">
+          <span class="eyebrow">Today's specials</span>
+          <h2 id="menu-title">Chef-crafted tasting menu</h2>
+          <div class="card-grid card-grid--menu">
+            <article class="menu-card">
+              <img
+                src="assets/hyderabad goat bur.jpg"
+                alt="Hyderabadi goat biryani"
+              />
+              <div class="menu-card__body">
+                <h3>Hyderabad Mutton Biryani</h3>
+                <p>
+                  Layered basmati, saffron goat, caramelized onion, and smoked
+                  raita.
+                </p>
+                <div class="menu-card__footer">
+                  <span class="price">Rs.2300</span>
+                  <a class="btn btn--small btn--outline" href="#order"
+                    >Select dish</a
+                  >
                 </div>
-                <div class="swiper-slide slide">
-                    <div class="content">
-                        <span>Our Specials</span>
-                        <h3>Barbeque</h3>
-                        <p>Texas-Style BBQ</p>
-                        <a href="#" class="btn">Order Now</a>
-                    </div>
-                    <div class="image">
-                        <img src="assets/bbq chic.jpg" alt="bbq">
-                    </div>
+              </div>
+            </article>
+            <article class="menu-card">
+              <img
+                src="assets/cheese koththu.jpg"
+                alt="Cheese koththu served hot"
+              />
+              <div class="menu-card__body">
+                <h3>Australian Cheese Koththu</h3>
+                <p>
+                  Buttery paratha, grilled vegetables, cheddar fondue, and herb
+                  oil.
+                </p>
+                <div class="menu-card__footer">
+                  <span class="price">Rs.1400</span>
+                  <a class="btn btn--small btn--outline" href="#order"
+                    >Select dish</a
+                  >
                 </div>
-                <div class="swiper-slide slide">
-                    <div class="content">
-                        <span>Our Specials</span>
-                        <h3>Roast chicken</h3>
-                        <p>Indian Roast Chicken</p>
-                        <a href="#" class="btn">Order Now</a>
-                    </div>
-                    <div class="image">
-                        <img src="assets/indian roast.jpg" alt="burger">
-                    </div>
+              </div>
+            </article>
+            <article class="menu-card">
+              <img
+                src="assets/koththu.jpg"
+                alt="American style koththu on plate"
+              />
+              <div class="menu-card__body">
+                <h3>American Street Koththu</h3>
+                <p>
+                  Charred chicken, smoky chipotle sauce, and crisp curry leaf
+                  crumble.
+                </p>
+                <div class="menu-card__footer">
+                  <span class="price">Rs.1000</span>
+                  <a class="btn btn--small btn--outline" href="#order"
+                    >Select dish</a
+                  >
                 </div>
+              </div>
+            </article>
+            <article class="menu-card">
+              <img
+                src="assets/buriyani.jpg"
+                alt="Sri Lankan chicken biryani in bowl"
+              />
+              <div class="menu-card__body">
+                <h3>Sri Lankan Chicken Biryani</h3>
+                <p>
+                  Roasted spices, coconut sambol, cashew curry, and mint
+                  chutney.
+                </p>
+                <div class="menu-card__footer">
+                  <span class="price">Rs.1500</span>
+                  <a class="btn btn--small btn--outline" href="#order"
+                    >Select dish</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section--alt"
+        id="testimonials"
+        aria-labelledby="testimonials-title"
+      >
+        <div class="container">
+          <span class="eyebrow">Reviews</span>
+          <h2 id="testimonials-title">
+            Loved by food critics &amp; families alike
+          </h2>
+          <div class="testimonial-slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="testimonial-card">
+                  <img
+                    src="assets/gulab.jpeg"
+                    alt="Dessert plate"
+                    loading="lazy"
+                  />
+                  <div class="testimonial-card__body">
+                    <p>
+                      “Every bite tastes like a celebration. The biryani
+                      reminded me of my grandma’s kitchen.”
+                    </p>
+                    <div class="testimonial-card__meta">
+                      <h3>Isuri Fernando</h3>
+                      <span>Food Blogger</span>
+                    </div>
+                    <div class="testimonial-card__rating">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="testimonial-card">
+                  <img
+                    src="assets/juice.jpg"
+                    alt="Refreshing lemon juice"
+                    loading="lazy"
+                  />
+                  <div class="testimonial-card__body">
+                    <p>
+                      “Quick, courteous, and consistently delicious. Their vegan
+                      options are a game changer.”
+                    </p>
+                    <div class="testimonial-card__meta">
+                      <h3>Malik Perera</h3>
+                      <span>Nutritionist</span>
+                    </div>
+                    <div class="testimonial-card__rating">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="testimonial-card">
+                  <img
+                    src="assets/desert.jpeg"
+                    alt="Chocolate donut dessert"
+                    loading="lazy"
+                  />
+                  <div class="testimonial-card__body">
+                    <p>
+                      “From starters to desserts, everything is plated
+                      beautifully and delivered piping hot.”
+                    </p>
+                    <div class="testimonial-card__meta">
+                      <h3>Anika Jayasuriya</h3>
+                      <span>Event Planner</span>
+                    </div>
+                    <div class="testimonial-card__rating">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                  </div>
+                </article>
+              </div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="dishes" id="Dishes">
-        <h3 class="sub-heading">Our Dishes</h3>
-        <h1 class="heading">Popular Dishes</h1>
-        <div class="box-container">
-            <div class="box">
-                <img src="assets/fry chic.jpg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Fry Chicken</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.1500.00</span>
-                <a href="#" class="btns">Add to cart</a>
+      <section class="section" id="order" aria-labelledby="order-title">
+        <div class="container order__grid">
+          <div class="order__intro">
+            <span class="eyebrow">Order &amp; reservations</span>
+            <h2 id="order-title">Ready for your next indulgence?</h2>
+            <p>
+              Reserve a table for dine-in, schedule a pickup, or have our
+              delivery experts bring comfort straight to your door.
+            </p>
+            <ul class="order__list">
+              <li>
+                <i class="fa-solid fa-phone"></i> Hotline:
+                <a href="tel:+94112233445">+94 11 223 3445</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i> 221 Spice Avenue,
+                Colombo 04
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i> Open daily from 10.00 AM to
+                11.00 PM
+              </li>
+            </ul>
+          </div>
+          <form class="order-form" aria-label="Order form">
+            <div class="form-row">
+              <label for="order-name">Full name</label>
+              <input
+                id="order-name"
+                name="name"
+                type="text"
+                placeholder="Your name"
+                required
+              />
             </div>
-            <div class="box">
-                <img src="assets/kfc.png">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>KFC Leg piece</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.1650.00</span>
-                <a href="#" class="btns">Add to cart</a>
+            <div class="form-row">
+              <label for="order-email">Email address</label>
+              <input
+                id="order-email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              />
             </div>
-
-            <div class="box">
-                <img src="assets/Korean-Fried-Chicken-RCSQ.jpg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Korean Fried Chicken</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.1700.00</span>
-                <a href="#" class="btns">Add to cart</a>
+            <div class="form-row form-row--split">
+              <div>
+                <label for="order-phone">Phone number</label>
+                <input
+                  id="order-phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="+94 77 123 4567"
+                  required
+                />
+              </div>
+              <div>
+                <label for="order-type">Service type</label>
+                <select id="order-type" name="type" required>
+                  <option value="">Choose an option</option>
+                  <option value="dine-in">Dine-in</option>
+                  <option value="pickup">Pickup</option>
+                  <option value="delivery">Delivery</option>
+                  <option value="catering">Catering</option>
+                </select>
+              </div>
             </div>
-
-            <div class="box">
-                <img src="assets/Submarine-Vegetable.jpg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Vegetable Submarine</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.500.00</span>
-                <a href="#" class="btns">Add to cart</a>
+            <div class="form-row form-row--split">
+              <div>
+                <label for="order-date">Date</label>
+                <input id="order-date" name="date" type="date" required />
+              </div>
+              <div>
+                <label for="order-time">Time</label>
+                <input id="order-time" name="time" type="time" required />
+              </div>
             </div>
-
-            <div class="box">
-                <img src="assets/vegan-naan.jpg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Butter Naan</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.1500.00</span>
-                <a href="#" class="btns">Add to cart</a>
+            <div class="form-row">
+              <label for="order-notes">Special requests</label>
+              <textarea
+                id="order-notes"
+                name="notes"
+                rows="4"
+                placeholder="Let us know about allergies or preferences"
+              ></textarea>
             </div>
-            <div class="box">
-                <img src="assets/2021-05-23.jpg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Chinese Cheese Roles</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.1500.00</span>
-                <a href="#" class="btns">Add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/extreame pizza.jpeg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Extreame Black Chicken Pizza</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.2000.00</span>
-                <a href="#" class="btns">Add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/Pan-Pizza-020.jpg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>BBQ Pan Pizza</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.1300.00</span>
-                <a href="#" class="btns">Add to cart</a>
-            </div>
-
+            <button class="btn btn--primary" type="submit">
+              Submit request
+            </button>
+            <p class="order-form__note">
+              We’ll confirm your request within 5 minutes via SMS and email.
+            </p>
+          </form>
         </div>
-    </section>
+      </section>
 
-    <section class="dishes" id="Dishes">
-        <h3 class="sub-heading">Our curry</h3>
-        <h1 class="heading">Special Curry</h1>
-        <div class="box-container">
-            <div class="box">
-                <img src="assets/beef kur.jpeg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Beef Kurma</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.1400.00</span>
-                <a href="#" class="btns">Add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/chicken-kurma-pressure-cooker-recipe.jpg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Chicken Kurma</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.1100.00</span>
-                <a href="#" class="btns">Add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/delicious-gbc65de431_1920.jpg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Mutton fry Curry</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.1800.00</span>
-                <a href="#" class="btns">Add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/thai-curry-g7179f8399_1920.jpg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Egg Curry</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.800.00</span>
-                <a href="#" class="btns">Add to cart</a>
-            </div>
+      <section class="section section--cta" aria-labelledby="newsletter-title">
+        <div class="container cta__inner">
+          <div class="cta__content">
+            <span class="eyebrow">Stay in the know</span>
+            <h2 id="newsletter-title">
+              Get weekly tasting menus &amp; exclusive rewards
+            </h2>
+            <p>
+              Subscribers receive first access to chef’s tables, masterclasses,
+              and limited-time dishes.
+            </p>
+          </div>
+          <form class="cta__form" aria-label="Newsletter signup">
+            <label class="sr-only" for="cta-email">Email address</label>
+            <input
+              id="cta-email"
+              type="email"
+              name="cta-email"
+              placeholder="Enter your email"
+              required
+            />
+            <button class="btn btn--primary" type="submit">Subscribe</button>
+          </form>
         </div>
-    </section>
+      </section>
+    </main>
 
-
-    <section class="dishes" id="Dishes">
-        <h3 class="sub-heading">Our Desert</h3>
-        <h1 class="heading">Hot and Cool Desert</h1>
-        <div class="box-container">
-            <div class="box">
-                <img src="assets/gulab.jpeg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Gulab Jamun</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.350.00</span>
-                <a href="#" class="btns">Add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/juice.jpg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Lemon Juice</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.200.00</span>
-                <a href="#" class="btns">Add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/food-g4e72d9a87_1920.jpg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Chicken Soup</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.220.00</span>
-                <a href="#" class="btns">Add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/desert.jpeg">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <h3>Chocolate Donat</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>Rs.250.00</span>
-                <a href="#" class="btns">Add to cart</a>
-            </div>
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div class="site-footer__brand">
+          <a href="#home" class="logo">
+            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+            <span>E-<span class="accent">Foody</span></span>
+          </a>
+          <p>
+            Crafting memorable dining experiences with global flavors, premium
+            ingredients, and heartfelt hospitality.
+          </p>
+          <div class="site-footer__social">
+            <a href="https://www.facebook.com" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.twitter.com" aria-label="Twitter"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
         </div>
-    </section>
-
-    <section class="about" id="About">
-        <h3 class="sub-heading">About Us</h3>
-        <h1 class="heading">Why Choose Us</h1>
-
-        <div class="raw">
-            <div class="image">
-                <img src="assets/istockphoto-623207758-612x612.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Good and Tasty Food </h3>
-                <p>
-                    From the very first moment, the friends could look at their clients without flinching and guarantee
-                    them the best food around the local area — in light of the fact that they knew the ranchers who
-                    developed the fixings, and they realized those agriculturists thought about quality.</p>
-                <br>
-                <p>From that point forward, our agriculturists have developed directly close by us, and the fixings we
-                    use are as yet our most noteworthy need. Nobody cherishes food more than E - Foody.
-                </p><br>
-                <div class="icons-container">
-                    <div class="icons">
-                        <i class="fas fa-shipping-fast"></i>
-                        <span>Free Delivery</span>
-                    </div>
-                    <div class="icons">
-                        <i class="fas fa-dollar-sign"></i>
-                        <span>Easy Payment</span>
-                    </div>
-                    <div class="icons">
-                        <i class="fas fa-headphones"></i>
-                        <span>24/7 Service</span>
-                    </div>
-                </div>
-                <a href="#" class="btn">Learn More</a>
-            </div>
-
+        <div class="site-footer__links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#signature-dishes">Signature dishes</a></li>
+            <li><a href="#menu">Seasonal menu</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#order">Reservations</a></li>
+          </ul>
         </div>
-    </section>
-
-    <section class="menu" id="Menu">
-        <h3 class="sub-heading">Our Menu</h3>
-        <h1 class="heading">Today Specials</h1>
-
-        <div class="box-container">
-            <div class="box">
-                <div class="image">
-                    <img src="assets/hyderabad goat bur.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>Hyderabad Mutton Buriyani</h3>
-                    <p>
-                        Authentic Hyderabadi Biryani is an Indian cuisine that has a distinctive taste. It is made of
-                        rice, lentils, and spices. Biryani can be made with a variety of meat or vegetable versions. In
-                        this Hyderabadi biryani recipe, we will show you how to make the dish step-by-step.
-                    </p>
-                    <span class="price">Rs.2300.00</span>
-                    <a href="#" class="btnf">Add to cart</a>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="assets/cheese koththu.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>Australian Cheese Koththu</h3>
-                    <p>
-                        Authentic Australian Cheese Koththu is an Australian cuisine that has a distinctive taste. It is
-                        made of
-                        parata, meal, and spices. cheese koththu can be made with a variety of meat or vegetable
-                        versions. In
-                        this koththu recipe, we will show you how to make the dish step-by-step.
-                    </p>
-                    <span class="price">Rs.1400.00</span>
-                    <a href="#" class="btnf">Add to cart</a>
-
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="assets/koththu.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>Special American Koththu</h3>
-                    <p>
-                        Authentic koththu is an American cuisine that has a distinctive taste. It is made of
-                        parata, Chicken, and spices. Koththu can be made with a variety of meat or vegetable versions.
-                        In
-                        this Koththu recipe, we will show you how to make the dish step-by-step.
-                    </p>
-                    <span class="price">Rs.1000.00</span>
-                    <a href="#" class="btnf">Add to cart</a>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="assets/buriyani.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>Srilankan Chicken Buriyani</h3>
-                    <p>
-                        Authentic Biryani is an Srilankan cuisine that has a distinctive taste. It is made of
-                        rice, lentils, and spices. Biryani can be made with a variety of meat or vegetable versions. In
-                        this biryani recipe, we will show you how to make the dish step-by-step.
-                    </p>
-                    <span class="price">Rs.1500.00</span>
-                    <a href="#" class="btnf">Add to cart</a>
-
-                </div>
-            </div>
+        <div class="site-footer__links">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="mailto:hello@efoody.com">hello@efoody.com</a></li>
+            <li><a href="tel:+94112233445">+94 11 223 3445</a></li>
+            <li><a href="#order">Delivery FAQs</a></li>
+            <li><a href="#order">Gift cards</a></li>
+          </ul>
         </div>
-    </section>
-
-    <section class="review" id="Review">
-        <h3 class="sub-heading">Customer's Review</h3>
-        <h1 class="heading">Most Recommendaded Reviews</h1>
-
-        <div class="swipper review-slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide box">
-                    <img src="assets/dho.jpg" alt="">
-                    <p>
-                        superb service. good food and healthy food. i Recommendaded
-                    </p>
-                    <h3>Mahendra Dhoni</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-
-                <div class="swiper-slide box">
-                    <img src="assets/virat-kohli.jpg" alt="">
-                    <p>
-                        superb service. good food and healthy food. i Recommendaded
-                    </p>
-                    <h3>Virat Kohli</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-
-                <div class="swiper-slide box">
-                    <img src="assets/jos-buttler.jpg" alt="">
-                    <p>
-                        superb service. good food and healthy food. i Recommendaded
-                    </p>
-                    <h3>Jos Buttler</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-
-                <div class="swiper-slide box">
-                    <img src="assets/dho.jpg" alt="">
-                    <p>
-                        superb service. good food and healthy food. i Recommendaded
-                    </p>
-                    <h3>Mahendra Dhoni</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-
-                <!-- <div class="swiper-slide box">
-                    <img src="assets/virat-kohli.jpg" alt="">
-                    <p>
-                        superb service. good food and healthy food. i Recommendaded
-                    </p>
-                    <h3>Virat Kohli</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div> -->
-
-                <div class="swiper-slide box">
-                    <img src="assets/jos-buttler.jpg" alt="">
-                    <p>
-                        superb service. good food and healthy food. i Recommendaded
-                    </p>
-                    <h3>Jos Buttler</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </div>
+        <div class="site-footer__links">
+          <h3>Visit</h3>
+          <ul>
+            <li>221 Spice Avenue</li>
+            <li>Colombo 04, Sri Lanka</li>
+            <li>Open daily 10.00 AM – 11.00 PM</li>
+          </ul>
         </div>
-    </section>
+      </div>
+      <div class="container site-footer__legal">
+        <p>
+          &copy; <span id="current-year"></span> E-Foody. All rights reserved.
+        </p>
+        <div class="site-footer__policies">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-
     <script src="javasc.js"></script>
-</body>
-
+  </body>
 </html>
